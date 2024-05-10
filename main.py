@@ -41,7 +41,7 @@ screen_height = screen_info.current_h
 screen = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
 
 # Load and scale background image to match screen size
-background = pygame.image.load("PNG/stall/bg_blue.png")
+background = pygame.image.load("bg_blue.png")
 background = pygame.transform.scale(background, (screen_width, screen_height))
 pygame.mouse.set_visible(0)
 
@@ -56,7 +56,7 @@ target_group = pygame.sprite.Group()
 for _ in range(10):
     # Randomly select between "icon_target.png" and "icon_duck.png" for targets
     target_image = random.choice(["icon_target.png", "icon_duck.png"])
-    new_target = Target(target_image, random.randrange(0, screen_width-10), random.randrange(0, screen_height))
+    new_target = Target(target_image, random.randrange(0, screen_width - 10), random.randrange(0, screen_height))
     target_group.add(new_target)
 
 # Main game loop
